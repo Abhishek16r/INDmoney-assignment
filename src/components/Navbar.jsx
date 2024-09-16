@@ -7,7 +7,7 @@ import Sidebar from './Sidebar';
 
 const Navbar = () => {
   return (
-    <div className='w-11/12 ml-5 mt-10 mb-4 pb-3 border-b-[0.7px] border-gray-200'>
+    <div className='w-11/12 ml-5 mt-5 pt-10 mb-4 pb-3 border-b-[0.7px] border-gray-200'>
         <div className='flex justify-between'>
             {/* IND money logo */}
             <div>
