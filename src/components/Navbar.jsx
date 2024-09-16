@@ -7,7 +7,7 @@ import Sidebar from './Sidebar';
 
 const Navbar = () => {
   return (
-    <div className='w-11/12 ml-5 mt-5 pt-10 mb-4 pb-3 border-b-[0.7px] border-gray-200'>
+    <div className='w-11/12 ml-5 mt-4 pt-8 mb-4 pb-3 border-b-[0.7px] border-gray-200'>
         <div className='flex justify-between'>
             {/* IND money logo */}
             <div>
@@ -22,7 +22,7 @@ const Navbar = () => {
             </div>
             <div className='flex items-center ml-auto space-x-3'>
                 {/* Login button */}
-                <div className='px-2.5 py-1 my-2 text-green-500 bg-white border border-green-500 rounded-full transition-all duration-100 shadow-one'>
+                <div className='px-2.5 py-1 my-2 text-green-500 bg-white border border-green-500 rounded-full transition-all duration-100 shadow-sm'>
                   Log In
                 </div>
                 {/* Icons */}

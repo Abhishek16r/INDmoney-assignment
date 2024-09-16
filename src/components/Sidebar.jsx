@@ -33,7 +33,7 @@ const Sidebar = () => {
                     </h2>
                     
                     {/* Accordion */}
-                    <ul className="flex-1 overflow-y-auto transfrom transition-all duration-300 ease-in-out">
+                    <ul className="overflow-y-auto">
                         {/* Invest */}
                         <li>
                             <button onClick={() => toggleMenu('invest')} className="w-full text-left py-4 px-1 pl-4 pr-3 flex items-center justify-between border-b-[1.5px] border-gray-200">
@@ -41,7 +41,7 @@ const Sidebar = () => {
                                 <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['invest'] ? 'rotate-180' : ''}`} size={20} />
                             </button>
 
-                            <ul className={`transform transition-all duration-300 ease-in-out ${activeMenus['invest'] ? 'block' : 'hidden'}`}>
+                            <ul className={`transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['invest'] ? 'max-h-[1500px]' : 'max-h-0'}`}>
                                 {/* INDstocks */}
                                 <li>
                                     <button onClick={() => toggleMenu('indStocks')} className="w-full bg-gray-100 text-left py-4 px-1 pl-4 pr-3 flex items-center justify-between border-b-[1.5px] border-gray-200">
@@ -49,7 +49,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['indStocks'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 transition-all duration-300 ease-in-out max-h-0 overflow-hidden ${activeMenus['indStocks'] ? 'max-h-full ease out' : 'ease-in'} `}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['indStocks'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* INDstocks Submenu */}
                                         <li><Link to="https://www.indmoney.com/stocks" className=''>Stocks</Link></li>
                                         <li><Link to="https://www.indmoney.com/stocks/category/sip-in-stocks">SIP in Stocks</Link></li>
@@ -66,7 +66,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['usStocks'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['usStocks'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['usStocks'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* US stocks Submenu */}
                                         <li><Link to="https://www.indmoney.com/us-stocks" className=''>US Stocks</Link></li>
                                     </ul>
@@ -79,7 +79,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['etfs'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['etfs'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['etfs'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* ETFs Submenu */}
                                         <li><Link to="https://www.indmoney.com/us-stocks/top-etfs?heading=Explore+US+Stocks+Categories" className=''>Global ETFs</Link></li>
                                         <li><Link to="https://www.indmoney.com/stocks/category/gold-etfs" className=''>Gold ETFs</Link></li>
@@ -94,7 +94,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['mutualFunds'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['mutualFunds'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['mutualFunds'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Mutual Funds Submenu */}
                                         <li><Link to="https://www.indmoney.com/mutual-funds" className=''>All Mutual Funds</Link></li>
                                         <li><Link to="https://www.indmoney.com/mutual-funds/equity-funds" className=''>Equity Funds</Link></li>
@@ -111,7 +111,7 @@ const Sidebar = () => {
                                     <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['nps'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['nps'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['nps'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* NPS submenu */}
                                         <li><Link to="https://www.indmoney.com/features/nps-national-pension-scheme" className=''>Invest in NPS</Link></li>
                                         <li><Link to="https://www.indmoney.com/calculators/nps-calculator" className=''>NPS Calculator</Link></li>
@@ -126,7 +126,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['otherInstruments'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['otherInstruments'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['otherInstruments'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Other Instruments submenu */}
                                         <li><Link to="https://www.indmoney.com/fixed-deposit" className=''>Fixed Deposits</Link></li>                                        
                                         <li><Link to="https://www.indmoney.com/insurance" className=''>Insurance</Link></li>                                        
@@ -143,7 +143,7 @@ const Sidebar = () => {
                                 <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['features'] ? 'rotate-180' : ''}`} size={20} />
                             </button>
 
-                            <ul className={`${activeMenus['features'] ? 'block' : 'hidden'}`}>
+                            <ul className={`transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['features'] ? 'max-h-[1500px]' : 'max-h-0'}`}>
                                 {/* Calculators */}
                                 <li>
                                     <button onClick={() => toggleMenu('calculators')} className="w-full bg-gray-100 text-left py-4 px-1 pl-4 pr-3 flex items-center justify-between border-b-[1.5px] border-gray-200">
@@ -151,7 +151,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['calculators'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 gap-y-3.5 ${activeMenus['calculators'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['calculators'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Calculators Submenu */}
                                         <li><Link to="https://www.indmoney.com/calculators/sip-calculator" className=''>SIP Calculator</Link></li>
                                         <li><Link to="https://www.indmoney.com/calculators/brokerage-calculator" className=''>Brokerage Calculator</Link></li>
@@ -175,7 +175,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['subFeatures'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['subFeatures'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['subFeatures'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Features Submenu */}
                                         <li><Link to="https://www.indmoney.com/features/best-trading-app" className=''>Trading App</Link></li>
                                         <li><Link to="https://www.indmoney.com/features/mutual-fund-analytics" className=''>Mutual Fund Analytics</Link></li>
@@ -202,8 +202,7 @@ const Sidebar = () => {
                                 <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['market'] ? 'rotate-180' : ''}`} size={20} />
                             </button>
 
-                            <ul className={`${activeMenus['market'] ? 'block' : 'hidden'}`}>
-
+                            <ul className={`transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['market'] ? 'max-h-[1500px]' : 'max-h-0'}`}>
                                 {/* Market Movers */}
                                 <li>
                                     <button onClick={() => toggleMenu('marketMovers')} className="w-full bg-gray-100 text-left py-4 px-1 pl-4 pr-3 flex items-center justify-between border-b-[1.5px] border-gray-200">
@@ -211,7 +210,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['marketMovers'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['marketMovers'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['marketMovers'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Market Movers Submenu */}
                                         <li><Link to="https://www.indmoney.com/market" className=''>Stock Market Today</Link></li>
                                         <li><Link to="https://www.indmoney.com/stocks/category/52-week-high" className=''>52 Week High</Link></li>
@@ -230,7 +229,7 @@ const Sidebar = () => {
                                     <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['stockCategory'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['stockCategory'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['stockCategory'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Stock Category Submenu */}
                                         <li><Link to="https://www.indmoney.com/stocks/category/buy-stocks" className=''>Stocks to buy today</Link></li>
                                         <li><Link to="https://www.indmoney.com/stocks/category/penny-stocks" className=''>Penny Stocks</Link></li>
@@ -249,7 +248,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['indices'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['indices'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['indices'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Indices Submenu */}
                                         <li><Link to="https://www.indmoney.com/indices/sensex" className=''>BSE Sensex</Link></li>
                                         <li><Link to="https://www.indmoney.com/indices/nifty-50" className=''>Nifty 50</Link></li>
@@ -268,7 +267,7 @@ const Sidebar = () => {
                                         <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['globalIndices'] ? 'rotate-180' : ''}`} size={20} />
                                     </button>
 
-                                    <ul className={`ml-4 text-sm leading-10 my-2 ${activeMenus['globalIndices'] ? 'block' : 'hidden'}`}>
+                                    <ul className={`ml-4 text-sm leading-10 transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['globalIndices'] ? 'max-h-[1500px]' : 'max-h-0'} `}>
                                         {/* Global Indices Submenu */}
                                         <li><Link to="https://www.indmoney.com/indices/gift-nifty" className=''>Gift Nifty</Link></li>
                                         <li><Link to="https://www.indmoney.com/indices/dow-jones-industrial-average" className=''>Dow Jones Industrial Average</Link></li>
@@ -297,7 +296,7 @@ const Sidebar = () => {
                             <IoIosArrowUp className={`text-gray-400 w-6 transform transition-transform duration-300 ease ${activeMenus['disclosure'] ? 'rotate-180' : ''}`} size={20} />
                             </button>
 
-                            <ul className={`${activeMenus['disclosure'] ? 'block' : 'hidden'}`}>
+                            <ul className={`transition-max-height duration-300 ease-in-out overflow-hidden ${activeMenus['disclosure'] ? 'max-h-[1500px]' : 'max-h-0'}`}>
 
                                 {/* Complaint Status */}
                                 <li>
@@ -341,7 +340,7 @@ const Sidebar = () => {
                                 <FaStar className="text-yellow-500"/>
                                 <FaStarHalfAlt className="text-yellow-500"/>
                             </div>
-                            <div className='flex justify-center items-center gap-x-1'>
+                            <div className='flex ml-1 justify-center items-center gap-x-1 text-xs'>
                                 <IoLogoGooglePlaystore size={30}/>
                                 4.6
                                 <FaStar className="text-yellow-500"/>
