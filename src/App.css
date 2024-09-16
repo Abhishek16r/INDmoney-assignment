@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; 
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Mobile view container */
+.mobile-view {
+  width: 385px; 
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ccc; 
+  overflow-y: auto; 
+}
+
+
